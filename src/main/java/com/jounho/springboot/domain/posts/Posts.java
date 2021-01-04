@@ -1,5 +1,6 @@
 package com.jounho.springboot.domain.posts;
 
+import com.jounho.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter //(6)
 @NoArgsConstructor //(5)
 @Entity //(1)
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id //(2)
     @GeneratedValue(strategy = GenerationType.IDENTITY) //(3)
@@ -24,9 +25,13 @@ public class Posts {
     private String author;
 
     @Builder //(7)
-    public Posts(String title, String content,String author){
+    public Posts (String title, String content,String author){
         this.title=title;
         this.content=content;
         this.author=author;
+    }
+    public void update(String title,String content){
+        this.title=title;
+        this.content=content;
     }
 }
