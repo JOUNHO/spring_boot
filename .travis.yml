@@ -50,6 +50,13 @@ deploy:
 before_install:
   - chmod +x gradlew
   - chmod +x scripts/deploy.sh
+  - chmod +x scripts/health.sh
+  - chmod +x scripts/profile.sh
+  - chmod +x scripts/start.sh
+  - chmod +x scripts/stop.sh
+  - chmod +x switch.sh
+
+
 
 # CI 실행 완료시 메일.....
 notifications:
