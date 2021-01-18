@@ -54,7 +54,7 @@ before_install:
   - chmod +x scripts/profile.sh
   - chmod +x scripts/start.sh
   - chmod +x scripts/stop.sh
-  - chmod +x switch.sh
+  - chmod +x scripts/switch.sh
 
 
 
